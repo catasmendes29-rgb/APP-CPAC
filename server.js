@@ -6,14 +6,6 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT || 4173);
 const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, "data");
-const DB_PATH = path.join(DATA_DIR, "db.json")import http from "node:http";
-import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const PORT = Number(process.env.PORT || 4173);
-const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, "data");
 const DB_PATH = path.join(DATA_DIR, "db.json");
 const OUTPUT_DIR = process.env.OUTPUT_DIR || path.join(__dirname, "outputs");
 const SOURCE_DIR =
