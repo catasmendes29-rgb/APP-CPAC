@@ -505,7 +505,6 @@ function renderDataPage() {
   $("#dataCards").innerHTML = [
     ["Jogos", summary.matches, ""],
     ["Realizados", summary.finished, ""],
-    ["Por jogar", summary.scheduled, ""],
     ["Vitórias", summary.wins, "result-win"],
     ["Empates", summary.draws, "result-draw"],
     ["Derrotas", summary.losses, "result-loss"],
@@ -544,7 +543,7 @@ function renderDataPage() {
           `<span class="badge ${kind}">${resultLetter(kind)}</span>`,
         ];
       });
-      return `<h3 class="competition-title">${competition}</h3>${table(["Jornada", "Adversário", "Local", "Resultado", "Estado"], rows)}`;
+      return `<h3 class="competition-title">${competition}</h3>${table(["Jornada", "Adversário", "Local", { label: "Resultado", colspan: 2 }], rows)}`;
     })
     .join("") || "<p>Sem jogos para esta competição.</p>";
 }
@@ -709,10 +708,17 @@ function renderLiveDetailSheets() {
 }
 
 function table(headers, rows) {
+  const colCount = headers.reduce((sum, header) => sum + Number(header.colspan || 1), 0);
+  const headerHtml = headers
+    .map((header) => {
+      if (typeof header === "object") return `<th colspan="${header.colspan || 1}">${header.label}</th>`;
+      return `<th>${header}</th>`;
+    })
+    .join("");
   const body = rows.length
     ? rows.map((row) => `<tr>${row.map((cell) => `<td>${cell ?? ""}</td>`).join("")}</tr>`).join("")
-    : `<tr><td colspan="${headers.length}">Sem dados registados.</td></tr>`;
-  return `<table><thead><tr>${headers.map((header) => `<th>${header}</th>`).join("")}</tr></thead><tbody>${body}</tbody></table>`;
+    : `<tr><td colspan="${colCount}">Sem dados registados.</td></tr>`;
+  return `<table><thead><tr>${headerHtml}</tr></thead><tbody>${body}</tbody></table>`;
 }
 
 function hydrateReportFields() {
@@ -856,6 +862,7 @@ document.addEventListener("click", async (event) => {
   if (teamPlayer) {
     state.selectedPlayerId = teamPlayer.dataset.playerId;
     renderTeamsPage();
+    $("#playerDetail")?.scrollIntoView({ behavior: "smooth", block: "start" });
     return;
   }
 
