@@ -1,0 +1,2108 @@
+{
+  "meta": {
+    "club": "Casa Pia AC",
+    "createdAt": "2026-05-19T09:17:27.436Z",
+    "sourceDir": "C:/Users/catas/OneDrive - Universidade do Algarve/Ambiente de Trabalho/CASA PIA AC",
+    "sourceWorkbook": "https://docs.google.com/spreadsheets/d/1nQnhwHzXcjsOqRvEyl19ipSWQfxIaJ5O/export?format=xlsx",
+    "importedAt": "2026-05-19T09:17:27.436Z",
+    "syncMode": "url",
+    "sourceWorkbookUrl": "https://docs.google.com/spreadsheets/d/1nQnhwHzXcjsOqRvEyl19ipSWQfxIaJ5O/export?format=xlsx",
+    "updatedAt": "2026-05-19T09:17:27.436Z"
+  },
+  "teams": [
+    {
+      "level": "Sub13",
+      "format": 7,
+      "label": "Sub13 Futebol 7"
+    },
+    {
+      "level": "Sub15",
+      "format": 9,
+      "label": "Sub15 Futebol 9"
+    },
+    {
+      "level": "Sub17",
+      "format": 11,
+      "label": "Sub17 Futebol 11"
+    },
+    {
+      "level": "Sub19",
+      "format": 11,
+      "label": "Sub19 Futebol 11"
+    }
+  ],
+  "players": [
+    {
+      "id": "Sub19_Laura_Barros",
+      "level": "Sub19",
+      "name": "Laura Barros",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Joana_Sousa",
+      "level": "Sub19",
+      "name": "Joana Sousa",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Ines_Dias",
+      "level": "Sub19",
+      "name": "Inês Dias",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Carolina_Temudo",
+      "level": "Sub19",
+      "name": "Carolina Temudo",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Denise_Ribeiro",
+      "level": "Sub19",
+      "name": "Denise Ribeiro",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Madalena_Silva",
+      "level": "Sub19",
+      "name": "Madalena Silva",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Soraia_Marques",
+      "level": "Sub19",
+      "name": "Soraia Marques",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Carolina_Antunes",
+      "level": "Sub19",
+      "name": "Carolina Antunes",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Matilde_Granadeiro",
+      "level": "Sub19",
+      "name": "Matilde Granadeiro",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Eliana_Rodrigues",
+      "level": "Sub19",
+      "name": "Eliana Rodrigues",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Lana_Monteiro",
+      "level": "Sub19",
+      "name": "Lana Monteiro",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Sara_Lima",
+      "level": "Sub19",
+      "name": "Sara Lima",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Ines_Saiegh",
+      "level": "Sub19",
+      "name": "Inês Saiegh",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Beatriz_Amoroso",
+      "level": "Sub19",
+      "name": "Beatriz Amoroso",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Caetana_Serrano",
+      "level": "Sub19",
+      "name": "Caetana Serrano",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Beatriz_Oliveira",
+      "level": "Sub19",
+      "name": "Beatriz Oliveira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Sofia_Belizario",
+      "level": "Sub19",
+      "name": "Sofia Belizário",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Ariana_Semedo",
+      "level": "Sub19",
+      "name": "Ariana Semedo",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Ines_Cardoso",
+      "level": "Sub19",
+      "name": "Inês Cardoso",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Beatriz_Correia",
+      "level": "Sub19",
+      "name": "Beatriz Correia",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Alice_Geada",
+      "level": "Sub19",
+      "name": "Alice Geada",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Sara_Correia",
+      "level": "Sub19",
+      "name": "Sara Correia",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Joana_Ferreira",
+      "level": "Sub19",
+      "name": "Joana Ferreira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Madalena_Vieira",
+      "level": "Sub19",
+      "name": "Madalena Vieira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Matilde_Oliveira",
+      "level": "Sub19",
+      "name": "Matilde Oliveira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Lidiana_Moreira",
+      "level": "Sub19",
+      "name": "Lidiana Moreira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Marcia_Santinhos",
+      "level": "Sub19",
+      "name": "Márcia Santinhos",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Iara_Santos",
+      "level": "Sub19",
+      "name": "Iara Santos",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Carolina_Francisco",
+      "level": "Sub19",
+      "name": "Carolina Francisco",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Joana_Moutela",
+      "level": "Sub19",
+      "name": "Joana Moutela",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Milena_Ermolina",
+      "level": "Sub19",
+      "name": "Milena Ermolina",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Joana_Rodrigues",
+      "level": "Sub19",
+      "name": "Joana Rodrigues",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Beatrice_Amorim",
+      "level": "Sub19",
+      "name": "Beatrice Amorim",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Mia_Aboubakr",
+      "level": "Sub19",
+      "name": "Mia Aboubakr",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Francisca_Cordeiro",
+      "level": "Sub19",
+      "name": "Francisca Cordeiro",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Maria_Coelho",
+      "level": "Sub19",
+      "name": "Maria Coelho",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub19_Luisa_Fernandes",
+      "level": "Sub19",
+      "name": "Luísa Fernandes",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Margarida_Alves",
+      "level": "Sub17",
+      "name": "Margarida Alves",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Maria_Coelho",
+      "level": "Sub17",
+      "name": "Maria Coelho",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Francisca_Cordeiro",
+      "level": "Sub17",
+      "name": "Francisca Cordeiro",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Violeta_Saraiva",
+      "level": "Sub17",
+      "name": "Violeta Saraiva",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Beatriz_Correia",
+      "level": "Sub17",
+      "name": "Beatriz Correia",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Ines_Zacarias",
+      "level": "Sub17",
+      "name": "Inês Zacarias",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Maria_Amaro",
+      "level": "Sub17",
+      "name": "Maria Amaro",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Matilde_Silva",
+      "level": "Sub17",
+      "name": "Matilde Silva",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Nicole_Pereira",
+      "level": "Sub17",
+      "name": "Nicole Pereira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Ines_Cardoso",
+      "level": "Sub17",
+      "name": "Inês Cardoso",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Sara_Correia",
+      "level": "Sub17",
+      "name": "Sara Correia",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Eliana_Rodrigues",
+      "level": "Sub17",
+      "name": "Eliana Rodrigues",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Claudia_Quadros",
+      "level": "Sub17",
+      "name": "Cláudia Quadros",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Matilde_Soares",
+      "level": "Sub17",
+      "name": "Matilde Soares",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Carolina_Francisco",
+      "level": "Sub17",
+      "name": "Carolina Francisco",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Nicole_Mate",
+      "level": "Sub17",
+      "name": "Nicole Mate",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Raquel_Paulo",
+      "level": "Sub17",
+      "name": "Raquel Paulo",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Luisa_Fernandes",
+      "level": "Sub17",
+      "name": "Luísa Fernandes",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Marcia_Santinhos",
+      "level": "Sub17",
+      "name": "Márcia Santinhos",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Joana_Moutela",
+      "level": "Sub17",
+      "name": "Joana Moutela",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Clara_Bento",
+      "level": "Sub17",
+      "name": "Clara Bento",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Matilde_Santos",
+      "level": "Sub17",
+      "name": "Matilde Santos",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Iara_Santos",
+      "level": "Sub17",
+      "name": "Iara Santos",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Mia_Aboubakr",
+      "level": "Sub17",
+      "name": "Mia Aboubakr",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Agnes_Mcpeack",
+      "level": "Sub17",
+      "name": "Agnes Mcpeack",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Madalena_Nova",
+      "level": "Sub17",
+      "name": "Madalena Nova",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Madalena_Neto",
+      "level": "Sub17",
+      "name": "Madalena Neto",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Aline_Arrulo",
+      "level": "Sub17",
+      "name": "Aline Arrulo",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub17_Mariana_Correia",
+      "level": "Sub17",
+      "name": "Mariana Correia",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Maria_Esteves",
+      "level": "Sub15",
+      "name": "Maria Esteves",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Mariana_Correia",
+      "level": "Sub15",
+      "name": "Mariana Correia",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Maria_Almeida",
+      "level": "Sub15",
+      "name": "Maria Almeida",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Maiara_Tavares",
+      "level": "Sub15",
+      "name": "Maiara Tavares",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Maria_Silvestre",
+      "level": "Sub15",
+      "name": "Maria Silvestre",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Mafalda_Torres",
+      "level": "Sub15",
+      "name": "Mafalda Torres",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Madalena_Nova",
+      "level": "Sub15",
+      "name": "Madalena Nova",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Teresa_Luz",
+      "level": "Sub15",
+      "name": "Teresa Luz",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Maria_Mateus",
+      "level": "Sub15",
+      "name": "Maria Mateus",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Clara_Silva",
+      "level": "Sub15",
+      "name": "Clara Silva",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Margarida_Fortunato",
+      "level": "Sub15",
+      "name": "Margarida Fortunato",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Aline_Arrulo",
+      "level": "Sub15",
+      "name": "Aline Arrulo",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Melissa_Freire",
+      "level": "Sub15",
+      "name": "Melissa Freire",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Maria_Sousa",
+      "level": "Sub15",
+      "name": "Maria Sousa",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Ivana_Franco",
+      "level": "Sub15",
+      "name": "Ivana Franco",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Madalena_Neto",
+      "level": "Sub15",
+      "name": "Madalena Neto",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Margarida_Garcia",
+      "level": "Sub15",
+      "name": "Margarida Garcia",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Beatriz_Reis",
+      "level": "Sub15",
+      "name": "Beatriz Reis",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Signe_Salo",
+      "level": "Sub15",
+      "name": "Signe Salo",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Francisca_Cordeiro",
+      "level": "Sub15",
+      "name": "Francisca Cordeiro",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Margarida_Fragata",
+      "level": "Sub15",
+      "name": "Margarida Fragata",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Ariela_Rangel",
+      "level": "Sub15",
+      "name": "Ariela Rangel",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Caetana_Assuncao",
+      "level": "Sub15",
+      "name": "Caetana Assunção",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Beatriz_Silva",
+      "level": "Sub15",
+      "name": "Beatriz Silva",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Rita_Sancho",
+      "level": "Sub15",
+      "name": "Rita Sancho",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Irina_Cabral",
+      "level": "Sub15",
+      "name": "Irina Cabral",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Marta_Fragoso",
+      "level": "Sub15",
+      "name": "Marta Fragoso",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Maria_Ferreira",
+      "level": "Sub15",
+      "name": "Maria Ferreira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Beatriz_Rodrigues",
+      "level": "Sub15",
+      "name": "Beatriz Rodrigues",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Thais_Tavares",
+      "level": "Sub15",
+      "name": "Thaís Tavares",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Ines_Zacarias",
+      "level": "Sub15",
+      "name": "Inês Zacarias",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Claudia_Quadros",
+      "level": "Sub15",
+      "name": "Cláudia Quadros",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Matilde_Soares",
+      "level": "Sub15",
+      "name": "Matilde Soares",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Joana_Caeiro",
+      "level": "Sub15",
+      "name": "Joana Caeiro",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Raquel_Paulo",
+      "level": "Sub15",
+      "name": "Raquel Paulo",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Diana_Carrilho",
+      "level": "Sub15",
+      "name": "Diana Carrilho",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Wami_Nunes",
+      "level": "Sub15",
+      "name": "Wami Nunes",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Nicole_Pereira",
+      "level": "Sub15",
+      "name": "Nicole Pereira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub15_Nicole_Mate",
+      "level": "Sub15",
+      "name": "Nicole Mate",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Teresa_Santos",
+      "level": "Sub13",
+      "name": "Teresa Santos",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Margarida_Oliveira",
+      "level": "Sub13",
+      "name": "Margarida Oliveira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Maria_Sequeira",
+      "level": "Sub13",
+      "name": "Maria Sequeira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Joana_Dias",
+      "level": "Sub13",
+      "name": "Joana Dias",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Maria_Campos",
+      "level": "Sub13",
+      "name": "Maria Campos",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Barbara_Junqueira",
+      "level": "Sub13",
+      "name": "Bárbara Junqueira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Larissa_Ferreira",
+      "level": "Sub13",
+      "name": "Larissa Ferreira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Ellery_Stolberg",
+      "level": "Sub13",
+      "name": "Ellery Stolberg",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Sara_Garcia",
+      "level": "Sub13",
+      "name": "Sara Garcia",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Alyah_Monteiro",
+      "level": "Sub13",
+      "name": "Alyah Monteiro",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Ines_Sousa",
+      "level": "Sub13",
+      "name": "Inês Sousa",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Joana_Silveira",
+      "level": "Sub13",
+      "name": "Joana Silveira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Eva_Conceicao",
+      "level": "Sub13",
+      "name": "Eva Conceição",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Leonor_Loureiro",
+      "level": "Sub13",
+      "name": "Leonor Loureiro",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Leonor_Miranda",
+      "level": "Sub13",
+      "name": "Leonor Miranda",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Diana_Carrilho",
+      "level": "Sub13",
+      "name": "Diana Carrilho",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Rafaela_Tavares",
+      "level": "Sub13",
+      "name": "Rafaela Tavares",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Leonor_Dias",
+      "level": "Sub13",
+      "name": "Leonor Dias",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Leonor_Garcia",
+      "level": "Sub13",
+      "name": "Leonor Garcia",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Ines_Violeta_Pereira",
+      "level": "Sub13",
+      "name": "Inês Violeta Pereira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Laura_Raposo",
+      "level": "Sub13",
+      "name": "Laura Raposo",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Madalena_Matos",
+      "level": "Sub13",
+      "name": "Madalena Matos",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Beatriz_Rodrigues",
+      "level": "Sub13",
+      "name": "Beatriz Rodrigues",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Lara_Moura",
+      "level": "Sub13",
+      "name": "Lara Moura",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Gabriela_Vieira",
+      "level": "Sub13",
+      "name": "Gabriela Vieira",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Madalena_Martins",
+      "level": "Sub13",
+      "name": "Madalena Martins",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Minetta_Coates",
+      "level": "Sub13",
+      "name": "Minetta Coates",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Caetana_Assuncao",
+      "level": "Sub13",
+      "name": "Caetana Assunção",
+      "number": "",
+      "position": ""
+    },
+    {
+      "id": "Sub13_Ines_Pereira",
+      "level": "Sub13",
+      "name": "Inês Pereira",
+      "number": "",
+      "position": ""
+    }
+  ],
+  "matches": [
+    {
+      "id": "CFBen_1J",
+      "opponent": "CF Benfica",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub19",
+      "competition": "Campeonato IIdiv",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "ADPastéis_1J",
+      "opponent": "AD Pasteis Bola",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub19",
+      "competition": "Campeonato IIdiv",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "RealSC_1J",
+      "opponent": "Real Sc - Futebol Sad",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub19",
+      "competition": "Campeonato IIdiv",
+      "goalsFor": 1,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "SCP_1J",
+      "opponent": "Sporting Cp Sad B",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub19",
+      "competition": "Campeonato IIdiv",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "CFBen_2J",
+      "opponent": "CF Benfica",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub19",
+      "competition": "Campeonato IIdiv",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "ADPastéis_2J",
+      "opponent": "AD Pasteis Bola",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub19",
+      "competition": "Campeonato IIdiv",
+      "goalsFor": 4,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "RealSC_2J",
+      "opponent": "Real Sc - Futebol Sad",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub19",
+      "competition": "Campeonato IIdiv",
+      "goalsFor": 1,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "SCP_2J",
+      "opponent": "Sporting Cp Sad B",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub19",
+      "competition": "Campeonato IIdiv",
+      "goalsFor": 0,
+      "goalsAgainst": 4,
+      "status": "finished"
+    },
+    {
+      "id": "Moitense_Taça",
+      "opponent": "Ufc Moitense",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub19",
+      "competition": "Taça Nacional- 1ªFase",
+      "goalsFor": 9,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "ADPastéis_Taça",
+      "opponent": "AD Pasteis Bola",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub19",
+      "competition": "Taça Nacional- 1ªFase",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "LeõesPS_Taça",
+      "opponent": "Cr Leões Porto Salvo",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub19",
+      "competition": "Taça Nacional- 1ªFase",
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "Seixal_Taça",
+      "opponent": "Seixal 1925",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub19",
+      "competition": "Taça Nacional- 1ªFase",
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "Armacenenses_Taça",
+      "opponent": "Cf Os Armacenenses",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub19",
+      "competition": "Taça Nacional- 1ªEliminatória",
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "status": "finished"
+    },
+    {
+      "id": "CFBen_1J_CI",
+      "opponent": "CF Benfica",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub19",
+      "competition": "Campeonato Interassociações",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "Sintrense_1J_CI",
+      "opponent": "Sintrense",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub19",
+      "competition": "Campeonato Interassociações",
+      "goalsFor": 5,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "RealSC_1J_CI",
+      "opponent": "Real Sc - Futebol Sad",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub19",
+      "competition": "Campeonato Interassociações",
+      "goalsFor": null,
+      "goalsAgainst": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "Saca_1J_CI",
+      "opponent": "Sg Sacavenense",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub19",
+      "competition": "Campeonato Interassociações",
+      "goalsFor": null,
+      "goalsAgainst": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "Alv_1Fase",
+      "opponent": "Alverca",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub17",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 4,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "CFBen_1Fase",
+      "opponent": "CF Benfica",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub17",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "SLB_1Fase",
+      "opponent": "SL Benfica Sad",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub17",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "Tocof_1Fase",
+      "opponent": "Tocof",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub17",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 1,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "Oliv_1Fase",
+      "opponent": "Olivais",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub17",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 3,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "Uni_1Fase",
+      "opponent": "Unidos",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub17",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 8,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "Torr_1J",
+      "opponent": "Torreense",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub17",
+      "competition": "Apuramento Campeão",
+      "goalsFor": 3,
+      "goalsAgainst": 4,
+      "status": "finished"
+    },
+    {
+      "id": "Sint_1J",
+      "opponent": "Sitrense",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub17",
+      "competition": "Apuramento Campeão",
+      "goalsFor": 1,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "SLB_1J",
+      "opponent": "Sl Benfica Sad",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub17",
+      "competition": "Apuramento Campeão",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "Oliv_1J",
+      "opponent": "Olivais",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub17",
+      "competition": "Apuramento Campeão",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "EstPraia_1J",
+      "opponent": "Estoril Praia",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub17",
+      "competition": "Apuramento Campeão",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "Torr_2J",
+      "opponent": "Torreense",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub17",
+      "competition": "Apuramento Campeão",
+      "goalsFor": 1,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "Sint_2J",
+      "opponent": "Sintrense",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub17",
+      "competition": "Apuramento Campeão",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "SLB_2J",
+      "opponent": "SL Benfica Sad",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub17",
+      "competition": "Apuramento Campeão",
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "Oliv_2J",
+      "opponent": "Olivais",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub17",
+      "competition": "Apuramento Campeão",
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "EstPraia_2J",
+      "opponent": "Estoril Praia",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub17",
+      "competition": "Apuramento Campeão",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "Sint_1J_TE",
+      "opponent": "Sintrense",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub17",
+      "competition": "Torneio Extraordinário",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "Torr_1J_TE",
+      "opponent": "Torreense",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub17",
+      "competition": "Torneio Extraordinário",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "LeoesPS_TE",
+      "opponent": "Leões Porto Salvo",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub17",
+      "competition": "Torneio Extraordinário",
+      "goalsFor": null,
+      "goalsAgainst": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "Vpinh_TE",
+      "opponent": "Venda Pinheiro",
+      "round": 1,
+      "venue": "",
+      "level": "Sub17",
+      "competition": "Torneio Extraordinário",
+      "goalsFor": null,
+      "goalsAgainst": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "Sint_1J_1Fase",
+      "opponent": "Sintrense",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 8,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "SCP_1J_1Fase",
+      "opponent": "Sporting Cp Sad",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub15",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 0,
+      "goalsAgainst": 5,
+      "status": "finished"
+    },
+    {
+      "id": "LeoesPS_1J_1Fase",
+      "opponent": "Leões Porto Salvo \"A\"",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 1,
+      "goalsAgainst": 10,
+      "status": "finished"
+    },
+    {
+      "id": "EstPraia_1J_1Fase",
+      "opponent": "Estoril Praia",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub15",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 0,
+      "goalsAgainst": 8,
+      "status": "finished"
+    },
+    {
+      "id": "CFBen_1J_1Fase",
+      "opponent": "CF Benfica",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "Sint_2J_1Fase",
+      "opponent": "Sintrense",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub15",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "SCP_2J_1Fase",
+      "opponent": "Sporting Cp Sad",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 6,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "LeoesPS_2J_1Fase",
+      "opponent": "Leões Porto Salvo \"A\"",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub15",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 1,
+      "goalsAgainst": 4,
+      "status": "finished"
+    },
+    {
+      "id": "EstPraia_2J_1Fase",
+      "opponent": "Estoril Praia",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 0,
+      "goalsAgainst": 4,
+      "status": "finished"
+    },
+    {
+      "id": "CFBen_2J_1Fase",
+      "opponent": "CF Benfica",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub15",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 5,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "Tocof_1J_2Ap",
+      "opponent": "Tocof",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub15",
+      "competition": "2º Apuramento",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "VVerde_1J_2Ap",
+      "opponent": "Vila Verde",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub15",
+      "competition": "2º Apuramento",
+      "goalsFor": 7,
+      "goalsAgainst": 3,
+      "status": "finished"
+    },
+    {
+      "id": "ADPasteis_1J_2Ap",
+      "opponent": "AD Pastéis",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "2º Apuramento",
+      "goalsFor": 0,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "LeoesPS_1J_2Ap",
+      "opponent": "Leões Porto Salvo \"A\"",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub15",
+      "competition": "2º Apuramento",
+      "goalsFor": 4,
+      "goalsAgainst": 4,
+      "status": "finished"
+    },
+    {
+      "id": "Tocof_2J_2Ap",
+      "opponent": "Tocof",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "2º Apuramento",
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "status": "finished"
+    },
+    {
+      "id": "VVerde_2J_2Ap",
+      "opponent": "Vila Verde",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "2º Apuramento",
+      "goalsFor": 3,
+      "goalsAgainst": 5,
+      "status": "finished"
+    },
+    {
+      "id": "ADPasteis_2J_2Ap",
+      "opponent": "AD Pastéis",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub15",
+      "competition": "2º Apuramento",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "LeoesPS_2J_2Ap",
+      "opponent": "Leões Porto Salvo \"A\"",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "2º Apuramento",
+      "goalsFor": 2,
+      "goalsAgainst": 4,
+      "status": "finished"
+    },
+    {
+      "id": "ADPasteis_1J_1TE",
+      "opponent": "AD Pastéis",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "Torneio Extraordinário",
+      "goalsFor": 2,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "Cast_1J_1TE",
+      "opponent": "Castanheira",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub15",
+      "competition": "Torneio Extraordinário",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "CFBen_1J_1TE",
+      "opponent": "CF Benfica",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "Torneio Extraordinário",
+      "goalsFor": 3,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "SLB_1J_1TE",
+      "opponent": "SL Benfica",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub15",
+      "competition": "Torneio Extraordinário",
+      "goalsFor": 1,
+      "goalsAgainst": 5,
+      "status": "finished"
+    },
+    {
+      "id": "Alve_1J_1TE",
+      "opponent": "Alverca",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "Torneio Extraordinário",
+      "goalsFor": null,
+      "goalsAgainst": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "Toco_1J_1TE",
+      "opponent": "Tocof",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub15",
+      "competition": "Torneio Extraordinário",
+      "goalsFor": null,
+      "goalsAgainst": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "Oliv_1J_1TE",
+      "opponent": "Olivais",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub15",
+      "competition": "Torneio Extraordinário",
+      "goalsFor": null,
+      "goalsAgainst": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "LeoesPSB_1J_1Fase",
+      "opponent": "Leões Porto Salvo \"B\"",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub13",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 6,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "EstPraia_1J_1Fase",
+      "opponent": "Estoril Praia",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub13",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "Oliv_1J_1Fase",
+      "opponent": "Olivais",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub13",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 4,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "SLB_1J_1Fase",
+      "opponent": "SL Benfica Sad",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub13",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 0,
+      "goalsAgainst": 5,
+      "status": "finished"
+    },
+    {
+      "id": "ADPasteis_1J_1Fase",
+      "opponent": "AD Pasteis Bola",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub13",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 3,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "LeoesPSB_2J_1Fase",
+      "opponent": "Leões Porto Salvo \"B\"",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub13",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 3,
+      "goalsAgainst": 4,
+      "status": "finished"
+    },
+    {
+      "id": "EstPraia_2J_1Fase",
+      "opponent": "Estoril Praia",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub13",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 0,
+      "goalsAgainst": 3,
+      "status": "finished"
+    },
+    {
+      "id": "Oliv_2J_1Fase",
+      "opponent": "Olivais",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub13",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "SLB_2J_1Fase",
+      "opponent": "SL Benfica Sad",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub13",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 2,
+      "goalsAgainst": 5,
+      "status": "finished"
+    },
+    {
+      "id": "ADPasteis_2J_1Fase",
+      "opponent": "AD Pasteis Bola",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub13",
+      "competition": "I Fase Campeonato",
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "SLB_1J_ApCamp",
+      "opponent": "SL Benfica Sad",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub13",
+      "competition": "Apuramento Campeão ",
+      "goalsFor": 2,
+      "goalsAgainst": 11,
+      "status": "finished"
+    },
+    {
+      "id": "Torr_1J_ApCamp",
+      "opponent": "Torreense",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub13",
+      "competition": "Apuramento Campeão ",
+      "goalsFor": 1,
+      "goalsAgainst": 0,
+      "status": "finished"
+    },
+    {
+      "id": "LeoesPSA_1J_ApCamp",
+      "opponent": "Leões Porto Salvo \"A\"",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub13",
+      "competition": "Apuramento Campeão ",
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "SCP_1J_ApCamp",
+      "opponent": "Sporting CP",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub13",
+      "competition": "Apuramento Campeão ",
+      "goalsFor": 0,
+      "goalsAgainst": 3,
+      "status": "finished"
+    },
+    {
+      "id": "EstPraia_1J_ApCamp",
+      "opponent": "Estoril Praia",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub13",
+      "competition": "Apuramento Campeão ",
+      "goalsFor": 1,
+      "goalsAgainst": 3,
+      "status": "finished"
+    },
+    {
+      "id": "SLB_2J_ApCamp",
+      "opponent": "SL Benfica Sad",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub13",
+      "competition": "Apuramento Campeão ",
+      "goalsFor": 0,
+      "goalsAgainst": 5,
+      "status": "finished"
+    },
+    {
+      "id": "Torr_2J_ApCamp",
+      "opponent": "Torreense",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub13",
+      "competition": "Apuramento Campeão ",
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "LeoesPSA_2J_ApCamp",
+      "opponent": "Leões Porto Salvo \"A\"",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub13",
+      "competition": "Apuramento Campeão ",
+      "goalsFor": 1,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "SCP_2J_ApCamp",
+      "opponent": "Sporting CP",
+      "round": 2,
+      "venue": "Casa",
+      "level": "Sub13",
+      "competition": "Apuramento Campeão ",
+      "goalsFor": 1,
+      "goalsAgainst": 4,
+      "status": "finished"
+    },
+    {
+      "id": "EstPraia_2J_ApCamp",
+      "opponent": "Estoril Praia",
+      "round": 2,
+      "venue": "Fora",
+      "level": "Sub13",
+      "competition": "Apuramento Campeão ",
+      "goalsFor": 5,
+      "goalsAgainst": 1,
+      "status": "finished"
+    },
+    {
+      "id": "EstPraia_TE",
+      "opponent": "Estoril Praia",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub13",
+      "competition": "Torneio Extraordináro",
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "status": "finished"
+    },
+    {
+      "id": "Oliv_TE",
+      "opponent": "Olivais",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub13",
+      "competition": "Torneio Extraordináro",
+      "goalsFor": null,
+      "goalsAgainst": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "ADPasteis_TE",
+      "opponent": "AD Pasteis Bola",
+      "round": 1,
+      "venue": "Fora",
+      "level": "Sub13",
+      "competition": "Torneio Extraordináro",
+      "goalsFor": null,
+      "goalsAgainst": null,
+      "status": "scheduled"
+    },
+    {
+      "id": "LeoesPSA_TE",
+      "opponent": "Leões Porto Salvo \"A\"",
+      "round": 1,
+      "venue": "Casa",
+      "level": "Sub13",
+      "competition": "Torneio Extraordináro",
+      "goalsFor": null,
+      "goalsAgainst": null,
+      "status": "scheduled"
+    }
+  ],
+  "matchReports": {
+    "LeoesPS_TE": {
+      "matchId": "LeoesPS_TE",
+      "delegate": "",
+      "tactic": "1-3-4-3 ",
+      "notes": "",
+      "starters": [
+        "Margarida Alves",
+        "Márcia Santinhos",
+        "Mia Aboubakr",
+        "Clara Bento",
+        "Francisca Cordeiro",
+        "Luísa Fernandes",
+        "Nicole Mate",
+        "Matilde Santos",
+        "Cláudia Quadros",
+        "Nicole Pereira",
+        "Eliana Rodrigues"
+      ],
+      "lineupSlots": [
+        "Margarida Alves",
+        "Márcia Santinhos",
+        "Mia Aboubakr",
+        "Clara Bento",
+        "Francisca Cordeiro",
+        "Luísa Fernandes",
+        "Nicole Mate",
+        "Matilde Santos",
+        "Cláudia Quadros",
+        "Nicole Pereira",
+        "Eliana Rodrigues"
+      ],
+      "bench": [
+        "Maria Coelho",
+        "Violeta Saraiva",
+        "Beatriz Correia",
+        "Inês Zacarias",
+        "Maria Amaro",
+        "Matilde Silva"
+      ],
+      "updatedAt": "2026-05-18T17:35:44.676Z",
+      "createdAt": "2026-05-18T17:35:44.676Z"
+    },
+    "RealSC_1J_CI": {
+      "matchId": "RealSC_1J_CI",
+      "delegate": "ze",
+      "tactic": "1-4-3-3",
+      "notes": "",
+      "starters": [
+        "Inês Saiegh",
+        "Soraia Marques",
+        "Carolina Antunes",
+        "Matilde Granadeiro",
+        "Eliana Rodrigues",
+        "Madalena Silva",
+        "Joana Sousa",
+        "Inês Dias",
+        "Laura Barros",
+        "Denise Ribeiro",
+        "Carolina Temudo"
+      ],
+      "lineupSlots": [
+        "Inês Saiegh",
+        "Soraia Marques",
+        "Carolina Antunes",
+        "Matilde Granadeiro",
+        "Eliana Rodrigues",
+        "Madalena Silva",
+        "Joana Sousa",
+        "Inês Dias",
+        "Laura Barros",
+        "Denise Ribeiro",
+        "Carolina Temudo"
+      ],
+      "bench": [
+        "Alice Geada",
+        "Sara Correia",
+        "Joana Ferreira",
+        "Madalena Vieira",
+        "Matilde Oliveira",
+        "Lidiana Moreira",
+        "Márcia Santinhos"
+      ],
+      "updatedAt": "2026-05-18T18:03:31.340Z",
+      "createdAt": "2026-05-18T18:03:31.340Z"
+    }
+  },
+  "live": {
+    "matchId": "Oliv_TE",
+    "minute": 0,
+    "period": "Pre-jogo",
+    "homeScore": 0,
+    "awayScore": 0,
+    "status": "Por iniciar",
+    "cornersFor": 0,
+    "cornersAgainst": 0,
+    "updatedAt": "2026-05-18T18:19:27.933Z",
+    "liveEnded": false,
+    "event": "Fim de jogo"
+  },
+  "events": [
+    {
+      "id": "evt_1779126158319",
+      "matchId": "LeoesPS_TE",
+      "period": "Fim de jogo",
+      "type": "Canto",
+      "team": "Casa Pia",
+      "playerId": "Sub17_Carolina_Francisco",
+      "playerName": "Carolina Francisco",
+      "outPlayerId": "Sub17_Matilde_Soares",
+      "outPlayerName": "Matilde Soares",
+      "inPlayerId": "Sub17_Carolina_Francisco",
+      "inPlayerName": "Carolina Francisco",
+      "cornersFor": 1,
+      "cornersAgainst": 0,
+      "notes": "",
+      "createdAt": "2026-05-18T17:42:38.319Z"
+    },
+    {
+      "id": "evt_1779125932696",
+      "matchId": "LeoesPS_TE",
+      "period": "1ª Parte",
+      "type": "Substituição",
+      "team": "Casa Pia",
+      "playerId": "Sub17_Carolina_Francisco",
+      "playerName": "Carolina Francisco",
+      "outPlayerId": "Sub17_Matilde_Soares",
+      "outPlayerName": "Matilde Soares",
+      "inPlayerId": "Sub17_Carolina_Francisco",
+      "inPlayerName": "Carolina Francisco",
+      "cornersFor": 0,
+      "cornersAgainst": 0,
+      "notes": "",
+      "createdAt": "2026-05-18T17:38:52.696Z"
+    },
+    {
+      "id": "evt_1779125774981",
+      "matchId": "LeoesPS_TE",
+      "period": "1ª Parte",
+      "type": "Golo",
+      "team": "Casa Pia",
+      "playerId": "Sub17_Carolina_Francisco",
+      "playerName": "Carolina Francisco",
+      "outPlayerId": "",
+      "outPlayerName": "",
+      "inPlayerId": "",
+      "inPlayerName": "",
+      "cornersFor": 0,
+      "cornersAgainst": 0,
+      "notes": "",
+      "createdAt": "2026-05-18T17:36:14.981Z"
+    }
+  ],
+  "liveGames": {
+    "RealSC_1J_CI": {
+      "matchId": "RealSC_1J_CI",
+      "minute": 0,
+      "period": "Pre-jogo",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Por iniciar",
+      "cornersFor": 0,
+      "cornersAgainst": 0,
+      "updatedAt": "2026-05-18T18:12:40.789Z",
+      "liveEnded": false,
+      "event": "Fim de jogo"
+    },
+    "Oliv_TE": {
+      "matchId": "Oliv_TE",
+      "minute": 0,
+      "period": "Pre-jogo",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Por iniciar",
+      "cornersFor": 0,
+      "cornersAgainst": 0,
+      "updatedAt": "2026-05-18T18:19:27.933Z",
+      "liveEnded": false,
+      "event": "Fim de jogo"
+    }
+  },
+  "hiddenLiveGames": [
+    "LeoesPS_TE",
+    "RealSC_1J_CI",
+    "Alve_1J_1TE"
+  ]
+}

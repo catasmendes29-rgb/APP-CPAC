@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Casa Pia AC Live</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img class="crest" src="/assets/logo.png" alt="Casa Pia AC" />
+        <div>
+          <strong>Casa Pia AC</strong>
+          <span>Registo de jogo e direto</span>
+        </div>
+      </div>
+      <nav class="tabs" aria-label="Navegação">
+        <button class="tab active" data-view="data">Resultados</button>
+        <button class="tab delegate-tab" data-view="delegate" hidden>Delegado</button>
+        <button class="tab" data-view="live">Live</button>
+      </nav>
+      <div class="auth-box">
+        <span id="sessionLabel">Visitante</span>
+        <button id="loginOpen">Login</button>
+        <button id="logoutBtn" hidden>Sair</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Futebol feminino formação</p>
+          <h1>Painel de jogo</h1>
+          <p id="heroStatus">A carregar jogos, jogadoras e estado do direto.</p>
+        </div>
+        <img class="goose" src="/assets/GOLDGANSO.png" alt="Ganso Casa Pia" />
+      </section>
+
+      <section id="delegate" class="view">
+        <section id="loginGate" class="panel login-gate">
+          <h2>Acesso reservado</h2>
+          <p>Entra com ID de delegado para registar fichas, eventos e gerir a cronologia.</p>
+          <div class="login-form">
+            <label>ID
+              <input id="loginId" autocomplete="username" />
+            </label>
+            <label>Palavra-passe
+              <input id="loginPass" type="password" autocomplete="current-password" />
+            </label>
+            <button id="loginSubmit" class="primary">Entrar</button>
+          </div>
+          <p id="loginError" class="login-error"></p>
+        </section>
+        <div id="delegateContent">
+        <div class="layout">
+          <aside class="panel compact">
+            <h2>Jogo</h2>
+            <label>Escalão
+              <select id="levelSelect"></select>
+            </label>
+            <label>Partida
+              <select id="matchSelect"></select>
+            </label>
+            <div class="match-card" id="matchCard"></div>
+            <label>Delegado
+              <input id="delegateName" placeholder="Nome do delegado" />
+            </label>
+            <label>Tática
+              <input id="tacticInput" placeholder="Ex.: 1-3-2-1, 1-4-3-3" />
+            </label>
+            <label>Notas
+              <textarea id="notesInput" rows="4" placeholder="Observações internas"></textarea>
+            </label>
+            <button id="saveReport" class="primary">Guardar ficha</button>
+          </aside>
+
+          <section class="panel">
+            <div class="section-head">
+              <div>
+                <h2>Convocatória</h2>
+                <p id="lineupHint">Seleciona titulares e suplentes no campo.</p>
+              </div>
+              <strong id="starterCounter">0/0 titulares</strong>
+            </div>
+
+            <div class="lineup-tools">
+              <button class="filter active" data-filter="starter">Titulares</button>
+              <button class="filter" data-filter="bench">Suplentes</button>
+              <button class="filter" data-filter="all">Todas</button>
+            </div>
+
+            <div class="pitch-wrap">
+              <div id="pitch" class="pitch" aria-label="Campo tático"></div>
+              <aside class="player-picker">
+                <h3 id="pickerTitle">Escolher titulares</h3>
+                <div id="playerGrid" class="player-grid"></div>
+              </aside>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel event-panel">
+          <div class="section-head">
+            <div>
+              <h2>Controlo e eventos</h2>
+              <p>Os botões de jogo controlam a live; os eventos alimentam a cronologia e o histórico.</p>
+            </div>
+            <div class="score-mini" id="scoreMini">0 - 0</div>
+          </div>
+
+          <div class="match-controls">
+            <button data-control="start-first" class="primary">Início do jogo</button>
+            <button data-control="half-time">Fim da 1ª parte</button>
+            <button data-control="start-second">Início da 2ª parte</button>
+            <button data-control="full-time">Fim de jogo</button>
+          </div>
+
+          <div class="event-form">
+            <label>Evento
+              <select id="eventType">
+                <option>Golo</option>
+                <option>Substituição</option>
+                <option>Canto</option>
+                <option>Cartão amarelo</option>
+                <option>Cartão vermelho</option>
+                <option>Falta</option>
+              </select>
+            </label>
+            <label>Equipa
+              <select id="eventTeam">
+                <option>Casa Pia</option>
+                <option>Adversário</option>
+              </select>
+            </label>
+            <label class="event-player-main">Jogadora
+              <select id="eventPlayer"></select>
+            </label>
+            <label class="assist-only">Assistência
+              <select id="assistPlayer"></select>
+            </label>
+            <label class="sub-only">Sai
+              <select id="subOutPlayer"></select>
+            </label>
+            <label class="sub-only">Entra
+              <select id="subInPlayer"></select>
+            </label>
+            <button id="addEvent" class="primary">Registar</button>
+          </div>
+          <div class="event-log">
+            <h3>Eventos deste jogo</h3>
+            <div id="eventChronology" class="timeline"></div>
+          </div>
+        </section>
+        </div>
+      </section>
+
+      <section id="data" class="view active">
+        <section class="panel">
+          <div class="section-head">
+            <div>
+              <h2>Resultados</h2>
+              <p>Resumo por escalão, histórico de jogos e estatísticas dos eventos registados.</p>
+            </div>
+            <label class="inline-label">Escalão
+              <select id="dataLevelSelect"></select>
+            </label>
+          </div>
+          <div id="dataCards" class="data-cards"></div>
+        </section>
+        <section id="excelSyncPanel" class="panel excel-sync" hidden>
+          <div class="section-head">
+            <div>
+              <h2>Atualizar pelo Excel</h2>
+              <p>Importa o ficheiro Casa pia.xlsx para atualizar resultados, jogos e jogadoras.</p>
+            </div>
+          </div>
+          <div class="sync-actions">
+            <input id="excelFileInput" type="file" accept=".xlsx,.xls" />
+            <button id="uploadExcel" class="primary">Importar Excel</button>
+            <button id="syncExcelUrl">Sincronizar link online</button>
+            <button id="reloadSource">Recarregar Excel local</button>
+          </div>
+          <p id="syncStatus" class="sync-status"></p>
+        </section>
+        <section class="data-layout single">
+          <div class="panel">
+            <h2>Histórico de jogos</h2>
+            <div id="historyTable" class="table-wrap"></div>
+          </div>
+        </section>
+      </section>
+
+      <section id="live" class="view">
+        <section id="liveListPanel" class="panel live-hub">
+          <div class="section-head">
+            <div>
+              <h2>Jogos em Live</h2>
+              <p>Seleciona uma partida para abrir marcador, eventos e ficha de jogo.</p>
+            </div>
+          </div>
+          <div id="liveGamesList" class="live-grid"></div>
+        </section>
+
+        <section id="liveDetailPanel" hidden>
+        <button id="backToLiveList" class="ghost">Voltar aos jogos</button>
+        <div class="live-board">
+          <img src="/assets/ganso.png" alt="Ganso" />
+          <div class="live-main">
+            <p id="liveCompetition">Competição</p>
+            <h2 id="liveTitle">Casa Pia AC</h2>
+            <div class="scoreline">
+              <span>Casa Pia</span>
+              <strong id="liveScore">0 - 0</strong>
+              <span id="liveOpponent">Adversário</span>
+            </div>
+            <div class="live-meta">
+              <span id="livePhase">Por iniciar</span>
+              <span id="liveStatus">Por iniciar</span>
+              <span id="liveCorners">Cantos 0-0</span>
+            </div>
+          </div>
+        </div>
+        <section class="panel">
+          <div class="section-head">
+            <h2>Linha do tempo</h2>
+            <span>Atualiza automaticamente</span>
+          </div>
+          <div id="timeline" class="timeline"></div>
+        </section>
+        <section class="live-detail-grid">
+          <div class="panel">
+            <h2>Ficha de jogo</h2>
+            <div id="liveLineupSheet"></div>
+          </div>
+          <div class="panel">
+            <h2>Eventos marcados</h2>
+            <div id="liveEventSheet" class="timeline"></div>
+          </div>
+        </section>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

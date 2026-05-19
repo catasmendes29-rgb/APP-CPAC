@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: casa-pia-live
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/data
+      - key: OUTPUT_DIR
+        value: /var/data/outputs
+      - key: CASA_PIA_XLSX_URL
+        sync: false
+      - key: CASA_PIA_AUTO_SYNC_MINUTES
+        value: "5"
+    disk:
+      name: casa-pia-data
+      mountPath: /var/data
+      sizeGB: 1
