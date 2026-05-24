@@ -419,11 +419,13 @@ function updateEventFormMode() {
 function renderLive() {
   const match = currentMatch() || {};
   const live = state.liveDetailMatchId ? (state.db.liveGames || {})[state.liveDetailMatchId] || state.db.live || {} : state.db.live || {};
+  const isFinal = live.liveEnded || live.status === "Terminado";
   $("#scoreMini").textContent = `${live.homeScore ?? 0} - ${live.awayScore ?? 0}`;
   $("#liveCompetition").textContent = `${match.level || ""} · ${match.competition || ""}`;
   $("#liveTitle").textContent = `Casa Pia AC ${live.homeScore ?? 0} - ${live.awayScore ?? 0} ${match.opponent || "Adversário"}`;
   $("#livePhase").textContent = live.period || "Por iniciar";
-  $("#liveStatus").textContent = live.status || "Por iniciar";
+  $("#liveStatus").textContent = isFinal ? "Resultado final" : live.status || "Por iniciar";
+  $("#liveDetailPanel")?.classList.toggle("is-final", isFinal);
   $("#heroStatus").textContent = "#VOAMOSJUNTOS";
 }
 
@@ -664,13 +666,14 @@ function renderLiveHub() {
   const games = liveGames();
   list.innerHTML = games.length ? "" : "<p>Não há jogos em direto neste momento.</p>";
   games.forEach(({ match, live }) => {
+    const isFinal = live.liveEnded || live.status === "Terminado";
     const card = document.createElement("article");
-    card.className = "live-card";
+    card.className = `live-card ${isFinal ? "is-final" : ""}`;
   card.innerHTML = `
       <span>${match.level} · ${match.competition}</span>
       <strong>Casa Pia ${live.homeScore ?? 0}-${live.awayScore ?? 0} ${match.opponent}</strong>
-      <small>${live.period || "Jogo"} · ${live.status || "Em direto"}</small>
-      ${state.db.matchReports?.[match.id] ? "<em>Ficha criada</em>" : ""}
+      <small>${isFinal ? "Resultado final" : `${live.period || "Jogo"} · ${live.status || "Em direto"}`}</small>
+      ${isFinal ? "<em>Terminado</em>" : state.db.matchReports?.[match.id] ? "<em>Ficha criada</em>" : ""}
       ${isAdmin() ? `<button class="danger clear-live" data-match-id="${match.id}">Apagar do direto</button>` : ""}
     `;
     card.addEventListener("click", (event) => {
