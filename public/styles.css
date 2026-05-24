@@ -1040,6 +1040,14 @@ th {
   transform: translateY(-2px);
 }
 
+.live-card.is-final {
+  border-color: var(--gold);
+  border-left-color: var(--gold);
+  background:
+    linear-gradient(90deg, rgba(155, 128, 54, 0.24), transparent 36%),
+    linear-gradient(135deg, #050505, #151515);
+}
+
 .live-card strong {
   color: var(--gold);
   font-family: var(--condensed);
@@ -1063,6 +1071,19 @@ th {
   font-style: normal;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.live-card.is-final em,
+#liveDetailPanel.is-final .live-meta span:last-child {
+  color: #111;
+  background: var(--gold);
+}
+
+#liveDetailPanel.is-final .live-board {
+  border-color: var(--gold);
+  background:
+    linear-gradient(135deg, rgba(155, 128, 54, 0.18), transparent 42%),
+    #050505;
 }
 
 .live-detail-grid {
