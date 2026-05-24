@@ -698,7 +698,7 @@ function renderLiveDetailSheets() {
   const report = state.db.matchReports[matchId] || {};
   const match = matchById(matchId);
   const total = state.db.teams.find((team) => team.level === match?.level)?.format || (report.starters || []).length || 11;
-  const starters = report.starters || [];
+  const starters = (report.lineupSlots || report.starters || []).filter(Boolean);
   lineup.innerHTML = `
     <h3>Tática ${report.tactic || "-"}</h3>
     ${pitchMarkup(starters, report.tactic, total, { withPhotos: true, level: match?.level })}
