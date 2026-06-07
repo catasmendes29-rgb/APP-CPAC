@@ -847,6 +847,14 @@ th {
   border-color: rgba(155, 128, 54, 0.55);
 }
 
+#teams > .panel,
+#teams .teams-panel,
+#teams .player-detail {
+  color: #fff;
+  background: var(--black);
+  border-color: rgba(155, 128, 54, 0.55);
+}
+
 .teams-panel h2,
 .teams-panel p,
 .teams-panel label {
