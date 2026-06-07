@@ -620,6 +620,26 @@ textarea {
   margin-top: 16px;
 }
 
+.event-panel .section-head h2,
+.event-panel .event-log h3 {
+  color: var(--gold);
+}
+
+.event-panel .section-head p {
+  color: var(--white);
+}
+
+.event-panel label {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.event-panel select {
+  color: #111;
+  background: #fff;
+  font-weight: 800;
+}
+
 .match-controls {
   margin-bottom: 16px;
 }
