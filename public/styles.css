@@ -849,10 +849,21 @@ th {
 
 .teams-panel h2,
 .teams-panel p,
-.teams-panel label,
+.teams-panel label {
+  color: #111;
+}
+
+.teams-panel .section-head p {
+  color: #333;
+}
+
+.teams-panel label {
+  color: var(--gold);
+}
+
 .player-detail h2,
 .player-detail h3 {
-  color: #fff;
+  color: #111;
 }
 
 .teams-panel select {
