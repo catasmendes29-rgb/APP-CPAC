@@ -22,7 +22,8 @@ body {
   margin: 0;
   font-family: Inter, Segoe UI, Arial, sans-serif;
   color: var(--ink);
-  background: #000;
+  background:
+    linear-gradient(180deg, #000 0%, #000 24rem, #111 24rem, #ececea 43rem, #fff 100%);
   min-height: 100vh;
 }
 
@@ -229,24 +230,6 @@ main {
 .data-layout .panel,
 .event-panel,
 .live-hub {
-  color: #fff;
-  background: var(--black);
-  border-color: rgba(155, 128, 54, 0.55);
-}
-
-.view > .panel h2,
-.view > .panel h3,
-.view > .panel p,
-.view > .panel label,
-.data-layout .panel h2,
-.data-layout .panel h3,
-.data-layout .panel label {
-  color: #fff;
-}
-
-.view > .panel select,
-.data-layout .panel select {
-  color: #111;
   background: #fff;
 }
 
@@ -404,7 +387,7 @@ textarea {
 }
 
 .mini-pitch {
-  min-height: 640px;
+  min-height: 420px;
   margin: 12px 0 16px;
 }
 
@@ -575,6 +558,22 @@ textarea {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fafafa;
+}
+
+.player-search {
+  width: 100%;
+  margin: 4px 0 12px;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  color: var(--ink);
+  background: #fff;
+  font-weight: 800;
+}
+
+.player-search:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
 }
 
 .player-grid {
@@ -816,15 +815,6 @@ th {
   text-transform: uppercase;
 }
 
-#historyTable th:first-child,
-#historyTable td:first-child {
-  width: 70px;
-  min-width: 70px;
-  max-width: 70px;
-  padding-right: 6px;
-  padding-left: 6px;
-}
-
 .score .goals-for,
 .score .goals-against {
   background: transparent;
@@ -984,30 +974,22 @@ th {
 
 .live-hub {
   margin-bottom: 16px;
-  background:
-    linear-gradient(135deg, rgba(223, 31, 45, 0.14), transparent 28%),
-    linear-gradient(135deg, #020202, #101010 58%, rgba(155, 128, 54, 0.36));
 }
 
 .live-hub .section-head {
   margin: -18px -18px 16px;
   padding: 18px;
   color: #fff;
-  background:
-    linear-gradient(90deg, var(--red) 0 4px, transparent 4px),
-    linear-gradient(135deg, #050505, #111 58%, rgba(155, 128, 54, 0.55));
+  background: linear-gradient(135deg, #050505, #111 58%, var(--gold-dark));
   border-radius: 0;
-  border-bottom: 1px solid rgba(155, 128, 54, 0.75);
 }
 
 .live-hub .section-head h2 {
   color: #fff;
-  text-shadow: 2px 2px 0 #000;
 }
 
 .live-hub .section-head p {
-  color: #fff;
-  font-weight: 900;
+  color: #f2e7c3;
 }
 
 .live-grid {
@@ -1020,70 +1002,21 @@ th {
   display: grid;
   gap: 8px;
   padding: 16px;
-  border: 1px solid rgba(155, 128, 54, 0.72);
-  border-left: 5px solid var(--red);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--gold);
   border-radius: 0;
-  color: #fff;
-  background:
-    linear-gradient(90deg, rgba(155, 128, 54, 0.16), transparent 34%),
-    #090909;
+  background: #fff;
   cursor: pointer;
-  box-shadow: 0 14px 32px rgba(0,0,0,0.28);
-  transition: border-color 0.18s ease, transform 0.18s ease, background 0.18s ease;
-}
-
-.live-card:hover {
-  border-color: var(--gold);
-  background:
-    linear-gradient(90deg, rgba(223, 31, 45, 0.16), transparent 34%),
-    #111;
-  transform: translateY(-2px);
-}
-
-.live-card.is-final {
-  border-color: var(--gold);
-  border-left-color: var(--gold);
-  background:
-    linear-gradient(90deg, rgba(155, 128, 54, 0.24), transparent 36%),
-    linear-gradient(135deg, #050505, #151515);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.06);
 }
 
 .live-card strong {
-  color: var(--gold);
-  font-family: var(--condensed);
   font-size: 1.15rem;
-  font-weight: 900;
-  text-transform: uppercase;
 }
 
 .live-card span,
 .live-card small {
-  color: #fff;
-  font-weight: 800;
-}
-
-.live-card em {
-  width: fit-content;
-  padding: 5px 8px;
-  color: #fff;
-  background: var(--red);
-  font-size: 0.75rem;
-  font-style: normal;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.live-card.is-final em,
-#liveDetailPanel.is-final .live-meta span:last-child {
-  color: #111;
-  background: var(--gold);
-}
-
-#liveDetailPanel.is-final .live-board {
-  border-color: var(--gold);
-  background:
-    linear-gradient(135deg, rgba(155, 128, 54, 0.18), transparent 42%),
-    #050505;
+  color: var(--muted);
 }
 
 .live-detail-grid {
@@ -1439,22 +1372,8 @@ th {
   }
 
   table {
-    min-width: 460px;
-    font-size: 0.8rem;
-  }
-
-  th,
-  td {
-    padding: 8px 6px;
-  }
-
-  #historyTable th:first-child,
-  #historyTable td:first-child {
-    width: 46px;
-    min-width: 46px;
-    max-width: 46px;
-    padding-right: 4px;
-    padding-left: 4px;
+    min-width: 520px;
+    font-size: 0.86rem;
   }
 
   .tab,
