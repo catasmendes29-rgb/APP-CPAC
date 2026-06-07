@@ -13,6 +13,7 @@ const state = {
   competitionFilter: "all",
   teamsLevel: "Sub13",
   selectedPlayerId: null,
+  playerSearch: "",
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -40,9 +41,22 @@ function activeTeam() {
 }
 
 function levelPlayers(level = state.level) {
-  return state.db.players
-    .filter((player) => player.level === level)
-    .sort((a, b) => a.name.localeCompare(b.name, "pt", { sensitivity: "base" }));
+  return allPlayers()
+    .filter((player) => player.level === level);
+}
+
+function allPlayers() {
+  return [...state.db.players].sort((a, b) => a.name.localeCompare(b.name, "pt", { sensitivity: "base" }));
+}
+
+function pickerPlayers() {
+  const term = state.playerSearch.trim().toLowerCase();
+  if (!term) return allPlayers();
+  return allPlayers().filter((player) => {
+    const name = player.name.toLowerCase();
+    const level = (player.level || "").toLowerCase();
+    return name.includes(term) || level.includes(term);
+  });
 }
 
 function levelMatches(level = state.level) {
@@ -80,7 +94,7 @@ function reportRosterNames() {
 
 function eventPlayers() {
   const names = new Set(reportRosterNames());
-  return levelPlayers().filter((player) => names.has(player.name));
+  return allPlayers().filter((player) => names.has(player.name));
 }
 
 function setView(view) {
@@ -339,9 +353,13 @@ function renderPlayers() {
         ? "Escolher suplentes"
         : "Todas as jogadoras";
 
+  const searchInput = $("#playerSearch");
+  if (searchInput && searchInput.value !== state.playerSearch) searchInput.value = state.playerSearch;
+
   const grid = $("#playerGrid");
   grid.innerHTML = "";
-  levelPlayers().forEach((player) => {
+  let visibleCount = 0;
+  pickerPlayers().forEach((player) => {
     const selectedStarter = state.starters.has(player.name);
     const selectedBench = state.bench.has(player.name);
     if (state.pickerMode === "starter" && selectedBench) return;
@@ -349,10 +367,15 @@ function renderPlayers() {
 
     const button = document.createElement("button");
     button.className = `player-card ${selectedStarter ? "is-starter" : ""} ${selectedBench ? "is-bench" : ""}`;
-    button.innerHTML = `<strong>${player.name}</strong><span>${selectedStarter ? "Titular" : selectedBench ? "Suplente" : "Disponível"}</span>`;
+    const status = selectedStarter ? "Titular" : selectedBench ? "Suplente" : "Disponivel";
+    button.innerHTML = `<strong>${player.name}</strong><span>${status} - ${player.level || "Escalao por definir"}</span>`;
     button.addEventListener("click", () => togglePlayer(player.name));
     grid.append(button);
+    visibleCount += 1;
   });
+  if (!visibleCount) {
+    grid.innerHTML = `<p class="empty-list">Sem jogadoras encontradas.</p>`;
+  }
 
   renderPitch();
   renderEventPlayers();
@@ -419,13 +442,11 @@ function updateEventFormMode() {
 function renderLive() {
   const match = currentMatch() || {};
   const live = state.liveDetailMatchId ? (state.db.liveGames || {})[state.liveDetailMatchId] || state.db.live || {} : state.db.live || {};
-  const isFinal = live.liveEnded || live.status === "Terminado";
   $("#scoreMini").textContent = `${live.homeScore ?? 0} - ${live.awayScore ?? 0}`;
   $("#liveCompetition").textContent = `${match.level || ""} · ${match.competition || ""}`;
   $("#liveTitle").textContent = `Casa Pia AC ${live.homeScore ?? 0} - ${live.awayScore ?? 0} ${match.opponent || "Adversário"}`;
   $("#livePhase").textContent = live.period || "Por iniciar";
-  $("#liveStatus").textContent = isFinal ? "Resultado final" : live.status || "Por iniciar";
-  $("#liveDetailPanel")?.classList.toggle("is-final", isFinal);
+  $("#liveStatus").textContent = live.status || "Por iniciar";
   $("#heroStatus").textContent = "#VOAMOSJUNTOS";
 }
 
@@ -507,6 +528,7 @@ function renderDataPage() {
   $("#dataCards").innerHTML = [
     ["Jogos", summary.matches, ""],
     ["Realizados", summary.finished, ""],
+    ["Por jogar", summary.scheduled, ""],
     ["Vitórias", summary.wins, "result-win"],
     ["Empates", summary.draws, "result-draw"],
     ["Derrotas", summary.losses, "result-loss"],
@@ -545,7 +567,7 @@ function renderDataPage() {
           `<span class="badge ${kind}">${resultLetter(kind)}</span>`,
         ];
       });
-      return `<h3 class="competition-title">${competition}</h3>${table(["Jornada", "Adversário", "Local", { label: "Resultado", colspan: 2 }], rows)}`;
+      return `<h3 class="competition-title">${competition}</h3>${table(["Jornada", "Adversário", "Local", "Resultado", "Estado"], rows)}`;
     })
     .join("") || "<p>Sem jogos para esta competição.</p>";
 }
@@ -666,14 +688,13 @@ function renderLiveHub() {
   const games = liveGames();
   list.innerHTML = games.length ? "" : "<p>Não há jogos em direto neste momento.</p>";
   games.forEach(({ match, live }) => {
-    const isFinal = live.liveEnded || live.status === "Terminado";
     const card = document.createElement("article");
-    card.className = `live-card ${isFinal ? "is-final" : ""}`;
+    card.className = "live-card";
   card.innerHTML = `
       <span>${match.level} · ${match.competition}</span>
       <strong>Casa Pia ${live.homeScore ?? 0}-${live.awayScore ?? 0} ${match.opponent}</strong>
-      <small>${isFinal ? "Resultado final" : `${live.period || "Jogo"} · ${live.status || "Em direto"}`}</small>
-      ${isFinal ? "<em>Terminado</em>" : state.db.matchReports?.[match.id] ? "<em>Ficha criada</em>" : ""}
+      <small>${live.period || "Jogo"} · ${live.status || "Em direto"}</small>
+      ${state.db.matchReports?.[match.id] ? "<em>Ficha criada</em>" : ""}
       ${isAdmin() ? `<button class="danger clear-live" data-match-id="${match.id}">Apagar do direto</button>` : ""}
     `;
     card.addEventListener("click", (event) => {
@@ -701,7 +722,7 @@ function renderLiveDetailSheets() {
   const report = state.db.matchReports[matchId] || {};
   const match = matchById(matchId);
   const total = state.db.teams.find((team) => team.level === match?.level)?.format || (report.starters || []).length || 11;
-  const starters = (report.lineupSlots || report.starters || []).filter(Boolean);
+  const starters = report.starters || [];
   lineup.innerHTML = `
     <h3>Tática ${report.tactic || "-"}</h3>
     ${pitchMarkup(starters, report.tactic, total, { withPhotos: true, level: match?.level })}
@@ -711,17 +732,10 @@ function renderLiveDetailSheets() {
 }
 
 function table(headers, rows) {
-  const colCount = headers.reduce((sum, header) => sum + Number(header.colspan || 1), 0);
-  const headerHtml = headers
-    .map((header) => {
-      if (typeof header === "object") return `<th colspan="${header.colspan || 1}">${header.label}</th>`;
-      return `<th>${header}</th>`;
-    })
-    .join("");
   const body = rows.length
     ? rows.map((row) => `<tr>${row.map((cell) => `<td>${cell ?? ""}</td>`).join("")}</tr>`).join("")
-    : `<tr><td colspan="${colCount}">Sem dados registados.</td></tr>`;
-  return `<table><thead><tr>${headerHtml}</tr></thead><tbody>${body}</tbody></table>`;
+    : `<tr><td colspan="${headers.length}">Sem dados registados.</td></tr>`;
+  return `<table><thead><tr>${headers.map((header) => `<th>${header}</th>`).join("")}</tr></thead><tbody>${body}</tbody></table>`;
 }
 
 function hydrateReportFields() {
@@ -865,7 +879,6 @@ document.addEventListener("click", async (event) => {
   if (teamPlayer) {
     state.selectedPlayerId = teamPlayer.dataset.playerId;
     renderTeamsPage();
-    $("#playerDetail")?.scrollIntoView({ behavior: "smooth", block: "start" });
     return;
   }
 
@@ -901,6 +914,11 @@ $$(".filter").forEach((button) => {
     $$(".filter").forEach((item) => item.classList.toggle("active", item === button));
     renderPlayers();
   });
+});
+
+$("#playerSearch")?.addEventListener("input", () => {
+  state.playerSearch = $("#playerSearch").value;
+  renderPlayers();
 });
 
 $$("[data-control]").forEach((button) => {
