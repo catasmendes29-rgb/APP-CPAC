@@ -850,11 +850,11 @@ th {
 .teams-panel h2,
 .teams-panel p,
 .teams-panel label {
-  color: #111;
+  color: #fff;
 }
 
 .teams-panel .section-head p {
-  color: #333;
+  color: #f2e7c3;
 }
 
 .teams-panel label {
@@ -863,7 +863,7 @@ th {
 
 .player-detail h2,
 .player-detail h3 {
-  color: #111;
+  color: #fff;
 }
 
 .teams-panel select {
