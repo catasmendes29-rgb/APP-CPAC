@@ -866,6 +866,23 @@ th {
   color: #fff;
 }
 
+.player-detail table {
+  color: #fff;
+  background: var(--black);
+}
+
+.player-detail td {
+  color: #fff;
+  background: var(--black);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.player-detail th {
+  color: #fff;
+  background: var(--black);
+  border-bottom: 1px solid var(--gold);
+}
+
 .teams-panel select {
   color: #111;
   background: #fff;
