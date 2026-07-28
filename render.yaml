@@ -1,4 +1,4 @@
-services:
+﻿services:
   - type: web
     name: casa-pia-live
     env: node
@@ -16,6 +16,12 @@ services:
         sync: false
       - key: CASA_PIA_AUTO_SYNC_MINUTES
         value: "5"
+      - key: ZEROZERO_AUTO_SYNC_MINUTES
+        value: "0"
+      - key: ZEROZERO_AUTO_SYNC_SEASON
+        value: "2024/2025"
+      - key: ZEROZERO_AUTO_SYNC_UNTIL_CURRENT
+        value: "1"
     disk:
       name: casa-pia-data
       mountPath: /var/data

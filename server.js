@@ -1,7 +1,8 @@
-import http from "node:http";
+﻿import http from "node:http";
 import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { syncZerozeroResults } from "./src/zerozero/zerozeroSync.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT || 4173);
@@ -17,7 +18,11 @@ const DEFAULT_SOURCE_XLSX_URL =
   "https://docs.google.com/spreadsheets/d/1nQnhwHzXcjsOqRvEyl19ipSWQfxIaJ5O/export?format=xlsx";
 const SOURCE_XLSX_URL = process.env.CASA_PIA_XLSX_URL || DEFAULT_SOURCE_XLSX_URL;
 const AUTO_SYNC_MINUTES = Number(process.env.CASA_PIA_AUTO_SYNC_MINUTES || 0);
+const ZEROZERO_AUTO_SYNC_MINUTES = Number(process.env.ZEROZERO_AUTO_SYNC_MINUTES || 0);
+const ZEROZERO_AUTO_SYNC_SEASON = process.env.ZEROZERO_AUTO_SYNC_SEASON || "2024/2025";
+const ZEROZERO_AUTO_SYNC_UNTIL_CURRENT = String(process.env.ZEROZERO_AUTO_SYNC_UNTIL_CURRENT || "1") === "1";
 let lastSync = null;
+let lastZerozeroSync = null;
 
 async function spreadsheetTool() {
   try {
@@ -55,10 +60,13 @@ async function exists(file) {
 }
 
 function cleanLevel(value) {
-  return String(value || "")
-    .trim()
-    .toUpperCase()
-    .replace("SUB", "Sub");
+  const text = String(value || "").trim().toLowerCase();
+  if (text.includes("13")) return "Sub13";
+  if (text.includes("15")) return "Sub15";
+  if (text.includes("17")) return "Sub17";
+  if (text.includes("19")) return "Sub19";
+  if (text.includes("senior")) return "Seniores";
+  return String(value || "").trim();
 }
 
 function pick(record, keys) {
@@ -87,6 +95,10 @@ function playerKey(name) {
     .trim();
 }
 
+function slugKey(value) {
+  return playerKey(value).replace(/\s+/g, "_");
+}
+
 function numberValue(value) {
   const number = Number(value);
   return Number.isFinite(number) ? number : 0;
@@ -102,6 +114,7 @@ function buildPlayerHistory(values) {
     if (!name || !opponent) continue;
     const item = {
       opponent,
+      season: String(pick(record, ["Época", "Epoca", "Temporada", "Season"]) || "").trim(),
       role: String(pick(record, ["Papel", "Função", "Funcao"]) || "").trim() || "-",
       minutes: pick(record, ["Tempo de Jogo (min)", "Minutos", "Tempo de Jogo"]) ?? "",
       yellows: numberValue(pick(record, ["Cartões Amarelos", "Cartoes Amarelos", "Amarelos"])),
@@ -149,8 +162,8 @@ async function importWorkbookLegacy() {
         opponent: record["Equipa Adv"] || "",
         round: record.Jornada || "",
         venue: record.Local || "",
-        level: cleanLevel(pick(record, ["Escalão", "EscalÃ£o"])),
-        competition: pick(record, ["Competição", "CompetiÃ§Ã£o"]) || "",
+        level: cleanLevel(pick(record, ["Escalão", "Escalão"])),
+        competition: pick(record, ["Competição", "Competicao"]) || "",
         goalsFor: goalsFor ?? null,
         goalsAgainst: goalsAgainst ?? null,
         status: goalsFor === null || goalsAgainst === null ? "scheduled" : "finished",
@@ -247,8 +260,8 @@ async function importWorkbookBuffer(buffer, filename = "upload.xlsx") {
         opponent: record["Equipa Adv"] || "",
         round: record.Jornada || "",
         venue: record.Local || "",
-        level: cleanLevel(pick(record, ["Escalão", "EscalÃ£o", "EscalÃƒÂ£o"])),
-        competition: pick(record, ["Competição", "CompetiÃ§Ã£o", "CompetiÃƒÂ§ÃƒÂ£o"]) || "",
+        level: cleanLevel(pick(record, ["Escalão", "Escalao"])),
+        competition: pick(record, ["Competição", "Competicao"]) || "",
         goalsFor: goalsFor ?? null,
         goalsAgainst: goalsAgainst ?? null,
         status: goalsFor === null || goalsAgainst === null ? "scheduled" : "finished",
@@ -325,6 +338,7 @@ function preserveAppData(imported, current) {
     matchReports: current.matchReports || {},
     liveGames: current.liveGames || {},
     hiddenLiveGames: current.hiddenLiveGames || [],
+    zerozero: current.zerozero || imported.zerozero || {},
     live: current.live || imported.live,
   };
 }
@@ -569,7 +583,50 @@ async function api(req, res, url) {
       configured: Boolean(SOURCE_XLSX_URL),
       autoSyncMinutes: AUTO_SYNC_MINUTES,
       lastSync,
+      zerozero: {
+        configured: true,
+        autoSyncMinutes: ZEROZERO_AUTO_SYNC_MINUTES,
+        autoSyncSeason: ZEROZERO_AUTO_SYNC_SEASON,
+        untilCurrent: ZEROZERO_AUTO_SYNC_UNTIL_CURRENT,
+        lastSync: lastZerozeroSync || db.zerozero?.lastSync || null,
+      },
     });
+    return;
+  }
+
+  if (req.method === "GET" && url.pathname === "/api/results") {
+    send(res, 200, {
+      current: db.matches || [],
+      zerozero: db.zerozero?.matches || [],
+      zerozeroStatus: lastZerozeroSync || db.zerozero?.lastSync || null,
+    });
+    return;
+  }
+
+  if (req.method === "POST" && url.pathname === "/api/sync-zerozero") {
+    const body = await readBody(req);
+    try {
+      const result = await syncZerozeroResults(db, {
+        dryRun: Boolean(body.dryRun),
+        updateResults: body.updateResults !== false,
+        season: body.season || body.seasonId || "2025/2026",
+        untilCurrent: Boolean(body.untilCurrent),
+        levels: Array.isArray(body.levels) ? body.levels : [],
+      });
+      db = result.db;
+      lastZerozeroSync = result.status;
+      if (!body.dryRun) await saveDb(db);
+      send(res, 200, { ...db, currentMatch: currentMatch(db), status: result.status, zerozero: db.zerozero || {} });
+    } catch (error) {
+      lastZerozeroSync = {
+        ok: false,
+        at: new Date().toISOString(),
+        source: "ZEROZERO",
+        blocked: /403|429|401|bloque/i.test(error.message || ""),
+        error: error.message || "Erro na sincronização ZeroZero",
+      };
+      send(res, 200, { status: lastZerozeroSync, zerozero: db.zerozero || {} });
+    }
     return;
   }
 
@@ -660,6 +717,44 @@ async function api(req, res, url) {
     return;
   }
 
+  if (req.method === "POST" && url.pathname === "/api/manual-match") {
+    const body = await readBody(req);
+    const level = cleanLevel(body.level || "Sub13");
+    const season = String(body.season || "").trim();
+    const competition = String(body.competition || "").trim();
+    const opponent = String(body.opponent || "").trim();
+    if (!competition || !opponent) {
+      send(res, 400, { error: "Indica pelo menos competição e adversário." });
+      return;
+    }
+    const goalsFor = body.goalsFor === "" || body.goalsFor === null || body.goalsFor === undefined ? null : Number(body.goalsFor);
+    const goalsAgainst = body.goalsAgainst === "" || body.goalsAgainst === null || body.goalsAgainst === undefined ? null : Number(body.goalsAgainst);
+    const id = body.id || `manual_${level}_${slugKey(`${season}_${competition}_${opponent}_${body.round || ""}_${body.venue || ""}`)}`;
+    const match = {
+      id,
+      opponent,
+      round: String(body.round || "").trim(),
+      venue: String(body.venue || "").trim() || "Casa",
+      level,
+      season,
+      competition,
+      date: String(body.date || "").trim(),
+      time: String(body.time || "").trim(),
+      goalsFor,
+      goalsAgainst,
+      status: goalsFor === null || goalsAgainst === null ? "scheduled" : "finished",
+      source: "MANUAL",
+      updatedAt: new Date().toISOString(),
+    };
+    const index = db.matches.findIndex((item) => item.id === id);
+    if (index >= 0) db.matches[index] = { ...db.matches[index], ...match };
+    else db.matches.push(match);
+    db.matches.sort((a, b) => `${a.season || ""}${a.level}${a.date || ""}${a.time || ""}`.localeCompare(`${b.season || ""}${b.level}${b.date || ""}${b.time || ""}`));
+    await saveDb(db);
+    send(res, 200, { ...db, currentMatch: currentMatch(db), manualMatch: match });
+    return;
+  }
+
   if (req.method === "GET" && url.pathname === "/api/export") {
     const exported = await exportXlsx(db);
     send(res, 200, exported);
@@ -709,17 +804,41 @@ function startAutoSync() {
       await syncFromConfiguredUrl(db);
       console.log(`Excel sincronizado em ${lastSync.at}`);
     } catch (error) {
-      lastSync = { ok: false, at: new Date().toISOString(), error: error.message || "Erro na sincronizacao" };
-      console.error("Falha na sincronizacao Excel:", error);
+      lastSync = { ok: false, at: new Date().toISOString(), error: error.message || "Erro na sincronização" };
+      console.error("Falha na sincronização Excel:", error);
     }
   };
   setTimeout(run, 5000);
   setInterval(run, AUTO_SYNC_MINUTES * 60 * 1000);
 }
 
+function startZerozeroAutoSync() {
+  if (!ZEROZERO_AUTO_SYNC_MINUTES) return;
+  const run = async () => {
+    try {
+      const db = await loadDb();
+      const result = await syncZerozeroResults(db, {
+        season: ZEROZERO_AUTO_SYNC_SEASON,
+        untilCurrent: ZEROZERO_AUTO_SYNC_UNTIL_CURRENT,
+        updateResults: true,
+      });
+      lastZerozeroSync = result.status;
+      await saveDb(result.db);
+      console.log(`ZeroZero sincronizado em ${lastZerozeroSync.at}`);
+    } catch (error) {
+      lastZerozeroSync = { ok: false, at: new Date().toISOString(), error: error.message || "Erro na sincronização ZeroZero" };
+      console.error("Falha na sincronização ZeroZero:", error);
+    }
+  };
+  setTimeout(run, 12000);
+  setInterval(run, ZEROZERO_AUTO_SYNC_MINUTES * 60 * 1000);
+}
+
 server.listen(PORT, () => {
   console.log(`Casa Pia Live disponível em http://localhost:${PORT}`);
   console.log(`Fonte de dados: ${SOURCE_DIR}`);
-  if (SOURCE_XLSX_URL) console.log(`Sincronizacao Excel URL ativa: ${AUTO_SYNC_MINUTES || "manual"} min`);
+  if (SOURCE_XLSX_URL) console.log(`Sincronização Excel URL ativa: ${AUTO_SYNC_MINUTES || "manual"} min`);
+  if (ZEROZERO_AUTO_SYNC_MINUTES) console.log(`Sincronização ZeroZero ativa: ${ZEROZERO_AUTO_SYNC_MINUTES} min`);
   startAutoSync();
+  startZerozeroAutoSync();
 });

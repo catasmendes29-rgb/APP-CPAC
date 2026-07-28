@@ -1,4 +1,4 @@
-# Casa Pia AC Live
+﻿# Casa Pia AC Live
 
 Aplicação web para resultados, ficha de jogo, live e registo de eventos dos escalões de formação.
 
@@ -86,3 +86,31 @@ Com isto ativo:
 - a Catarina tambem pode carregar em `Sincronizar link online`.
 
 Se o ficheiro estiver privado no OneDrive, o link direto pode deixar de funcionar. Nesse caso, a versao totalmente profissional passa por Microsoft Graph/OneDrive com login e permissao formal da conta.
+
+## Exportar resultados do ZeroZero
+
+Teste alternativo para obter jogos/resultados dos escaloes femininos do Casa Pia AC a partir do ZeroZero:
+
+```bash
+npm run export:zerozero -- --season 2025/2026
+```
+
+O ficheiro gerado fica em:
+
+```text
+outputs/zerozero-casa-pia-2025-2026.json
+```
+
+O exportador usa as paginas publicas dos escaloes Sub13, Sub15, Sub17 e Sub19 e guarda adversario, competicao, jornada, data, casa/fora e resultado. Usa este modo com pouca frequencia/cache e confirma as condicoes de utilizacao da fonte antes de automatizar em producao.
+
+Na app, a Catarina pode usar `Sincronizar ZeroZero` para uma epoca ou `Sincronizar ate atualidade` para importar todas as epocas desde a epoca escolhida ate a epoca atual. Qualquer utilizador pode filtrar a pagina `Resultados` por epoca; a pagina `Equipas` usa o mesmo filtro para o historico e metricas individuais quando esses dados tiverem epoca associada.
+
+Para sincronizacao automatica pelo ZeroZero no Render, configurar:
+
+```text
+ZEROZERO_AUTO_SYNC_MINUTES=360
+ZEROZERO_AUTO_SYNC_SEASON=2024/2025
+ZEROZERO_AUTO_SYNC_UNTIL_CURRENT=1
+```
+
+`ZEROZERO_AUTO_SYNC_MINUTES=0` deixa a sincronizacao apenas manual. A Catarina tambem pode usar `Adicionar manualmente` para inserir ou corrigir competicao, adversario, data, local, jornada e resultado.
